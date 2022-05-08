@@ -18,7 +18,7 @@ In this tutorial you'll learn some fundamental concepts you need to get started 
 !!! Tip "Follow Along"
        Open the online editor at <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io</a> to follow along with this tutorial. You can run each of the commands described to get more familiar with the Pact programming language.
 
-       View the <a href="./beginner/online-editor.html target="_blank">Pact Online Code Editor Tutorial</a> for more information on running Pact commands.
+       View the <a href="./beginner/online-editor\.html"target="_blank">Pact Online Code Editor Tutorial</a> for more information on running Pact commands.
 ___
 
 ## **Pact Language Basics Tutorial**

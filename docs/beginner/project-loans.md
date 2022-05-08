@@ -86,7 +86,7 @@ The first step is to create the module and keysets for your smart contract.
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/1-module-and-keyset/solution.pact" target="_blank">Solution</a>
 
 !!! Note
-    If you’re unfamiliar with modules and keyset, our <a href="./beginner/pact-modules.html target="_blank">Pact Modules Tutorial</a> is a great place to get started.
+    If you’re unfamiliar with modules and keyset, our <a href="./beginner/pact-modules\.html"target="_blank">Pact Modules Tutorial</a> is a great place to get started.
 
 ___
 
@@ -397,8 +397,8 @@ If you’d like, you can try deploying this smart contract. You can deploy this 
 
 For help getting started and deploying in each of these environments, try the following tutorials.
 
-* <a href="./beginner/online-editor.html target="_blank">Pact Online Editor</a>
-* <a href="./beginner/pact-on-atom-sdk.html target="_blank">Pact Development on Atom SDK Tutorial</a>
+* <a href="./beginner/online-editor\.html"target="_blank">Pact Online Editor</a>
+* <a href="./beginner/pact-on-atom-sdk\.html"target="_blank">Pact Development on Atom SDK Tutorial</a>
 ___
 
 ## **Review**

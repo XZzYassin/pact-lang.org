@@ -16,7 +16,7 @@ These free tutorials have no prerequisites. Learn whenever and however you want 
 
 ### **Get Started**
 
-Start with our <a href="./beginner/welcome-to-pact.html target="_blank">Beginner Tutorial Series</a> which covers Pact’s fundamental concepts, followed by real smart contract projects you can deploy to our Testnet.
+Start with our <a href="./beginner/welcome-to-pact\.html"target="_blank">Beginner Tutorial Series</a> which covers Pact’s fundamental concepts, followed by real smart contract projects you can deploy to our Testnet.
 
 ### **Connect with our community**
 

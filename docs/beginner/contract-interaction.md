@@ -80,8 +80,8 @@ Each number in the image corresponds to one of the files you will work with.
 !!! Note
       Both auth.pact and payments.pact are smart contracts that you have worked with in previous tutorials. If you would like to learn more about these smart contracts, feel free to view each of their tutorials.
 
-      * **Auth Module:** <a href="./beginner/project-rotatable-wallet.html target="_blank">Project: Rotatable Wallet</a>
-      * **Payments Module:** <a href="./beginner/pact-accounts-and-transfers.html target="_blank">Accounts and Transfers</a>
+      * **Auth Module:** <a href="./beginner/project-rotatable-wallet\.html"target="_blank">Project: Rotatable Wallet</a>
+      * **Payments Module:** <a href="./beginner/pact-accounts-and-transfers\.html"target="_blank">Accounts and Transfers</a>
 
 There’s not much code to write for this project. Most of it has been written previously in the tutorials linked above. For this tutorial, focus on understanding the interactions between the smart contracts, and to take some time to study how the functions are interacting with each other.
 
@@ -247,7 +247,7 @@ Try using **load** to complete the code challenge.
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.1-load-auth-module/solution.repl" target="_blank">Solution</a>
 
 !!! Note
-      Transactions and loading are covered in more detail in <a href="./beginner/testing-pact-code-in-the-sdk.html target="_blank">Testing Pact Code in the SDK</a>.
+      Transactions and loading are covered in more detail in <a href="./beginner/testing-pact-code-in-the-sdk\.html"target="_blank">Testing Pact Code in the SDK</a>.
 
 ### **3.2 Load Payments Module**
 
