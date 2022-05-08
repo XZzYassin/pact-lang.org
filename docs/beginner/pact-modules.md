@@ -91,7 +91,7 @@ You can find examples using the Module Explorer in the <a href="https://pact.kad
 
 #### **Hello World**
 
-From the Module Explorer, open the Hello World Smart Contract. If you’re interested, this smart contract is explained in depth in the <a href="./beginner/hello-world-with-pact\.html"target="_blank">Hello World with Pact</a>.
+From the Module Explorer, open the Hello World Smart Contract. If you’re interested, this smart contract is explained in depth in the <a href="./beginner/hello-world-with-pact.html" target="_blank">Hello World with Pact</a>.
 
 
 Notice that the pattern of this smart contract is similar to the outline described above.

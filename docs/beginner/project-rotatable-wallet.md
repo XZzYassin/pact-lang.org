@@ -242,9 +242,9 @@ Your Rotatable Wallet smart contract is complete! If you’d like, you can deplo
 
 For more information on deploying this smart contract, view the following tutorials.
 
-* <a href="./beginner/hello-world-with-pact\.html"target="_blank">Hello World with Pact</a>
-* <a href="./beginner/online-editor\.html"target="_blank">Pact Online Editor</a>
-* <a href="./beginner/pact-on-atom-sdk\.html"target="_blank">Pact Development on Atom SDK</a>
+* <a href="./beginner/hello-world-with-pact.html" target="_blank">Hello World with Pact</a>
+* <a href="./beginner/online-editor.html" target="_blank">Pact Online Editor</a>
+* <a href="./beginner/pact-on-atom-sdk.html" target="_blank">Pact Development on Atom SDK</a>
 
 ___
 

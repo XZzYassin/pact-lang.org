@@ -32,9 +32,9 @@ ___
 
 Before starting this tutorial, it helps to have completed the following pre-requisites.
 
-* <a href="./beginner/pact-on-atom-sdk\.html"target="_blank">Pact Development on Atom SDK</a>: The SDK is required for testing in the SDK. You can get up and running with the SDK using this tutorial.
+* <a href="./beginner/pact-on-atom-sdk.html" target="_blank">Pact Development on Atom SDK</a>: The SDK is required for testing in the SDK. You can get up and running with the SDK using this tutorial.
 
-* <a href="./beginner/project-loans\.html"target="_blank">Project: Loans</a>: You will be building a REPL file for the Loans project covered in a separate tutorial. This isn’t required but is a helpful way to better understand the smart contract used throughout this tutorial.
+* <a href="./beginner/project-loans.html" target="_blank">Project: Loans</a>: You will be building a REPL file for the Loans project covered in a separate tutorial. This isn’t required but is a helpful way to better understand the smart contract used throughout this tutorial.
 
 ___
 
@@ -272,7 +272,7 @@ Follow the links provided or view the loans.pact file for more details.
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.1-generate-data/solution.repl" target="_blank">Solution</a>
 
 !!! Note
-       If you have not already completed the <a href="./beginner/project-loans\.html"target="_blank">Project: Loans tutorial</a>, try working through this tutorial to build the entire Loans smart contract for yourself!
+       If you have not already completed the <a href="./beginner/project-loans.html" target="_blank">Project: Loans tutorial</a>, try working through this tutorial to build the entire Loans smart contract for yourself!
 
 ### **3.2. Read Loans**
 

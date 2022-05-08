@@ -289,7 +289,7 @@ Here is a list of functions from the smart contract along with their purpose.
 | read-todos         | Reads all todos from the database.                  |
 
 !!! Note
-      While the code here is new, most of the functionality is covered in previous tutorials throughout the <a href="./beginner/welcome-to-pact\.html"target="_blank">Pact beginner tutorials</a>. If you have not completed these tutorials, take some time to look through them now to get a better understanding of this Pact smart contract.
+      While the code here is new, most of the functionality is covered in previous tutorials throughout the <a href="./beginner/welcome-to-pact.html" target="_blank">Pact beginner tutorials</a>. If you have not completed these tutorials, take some time to look through them now to get a better understanding of this Pact smart contract.
 
 As a quick refresher of what this Pact code is doing, here is a look at the code used to create the todo table and add a new todo.
 
