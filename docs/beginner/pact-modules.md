@@ -9,7 +9,7 @@ This tutorial introduces an essential feature in Pact known as modules. We’ll 
 * Example Modules
 
 !!! Summary "Key Takeaway"
-      A Pact Module contains the logic necessary to create your application. It is where all code is written to for a smart contract. All API and data definitions exist within the Module. 
+      A Pact Module contains the logic necessary to create your application. It is where all code is written to for a smart contract. All API and data definitions exist within the Module.
 ___
 
 ## **Pact Modules Tutorial**
@@ -20,7 +20,7 @@ Subscribe to our <a href="https://www.youtube.com/channel/UCB6-MaxD2hlcGLL70ukHo
 
 ## **Introduction to Pact Modules**
 
-A Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#module-declaration" target="_blank">Module</a> contains the logic necessary to create your application. It is where all code is written to for a smart contract. All API and data definitions exist within the Module. 
+A Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#module-declaration" target="_blank">Module</a> contains the logic necessary to create your application. It is where all code is written to for a smart contract. All API and data definitions exist within the Module.
 
 **Modules contain the following code**
 
@@ -32,7 +32,7 @@ A Pact <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.ht
 
 **Modules do not contain the following code**
 
-While modules contain the code needed to create a smart contract, some things are not included in a module. 
+While modules contain the code needed to create a smart contract, some things are not included in a module.
 
 * Keysets
 * Table Creation
@@ -44,7 +44,7 @@ ___
 
 ### **Module vs Smart Contract**
 
-When starting with Pact, you’ll often create single modules that contain the full functionality of your smart contract. 
+When starting with Pact, you’ll often create single modules that contain the full functionality of your smart contract.
 
 **This raises an important question...**
 
@@ -52,7 +52,7 @@ Why aren’t modules called smart contracts?
 
 The reason for this becomes clear once you begin creating more complicated smart contracts. These smart contracts will often contain many modules that work together to create your application. The goal of each module should be to create a focused set of functionality and clear organization within your files.
 
-While one module can make one smart contract, many modules can also make one smart contract. For that reason, we refer to the logic within a Pact file as a module. 
+While one module can make one smart contract, many modules can also make one smart contract. For that reason, we refer to the logic within a Pact file as a module.
 
 For more information see <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#module-declaration" target="_blank">modules</a> in the developer documentation.
 
@@ -60,7 +60,7 @@ ___
 
 ### **Create a Module**
 
-To create a module, you write the module keyword and name followed by the keyset that has access to call this module. 
+To create a module, you write the module keyword and name followed by the keyset that has access to call this module.
 
 Here is a module named **example** that gives access to an **admin-keyset**.
 
@@ -75,9 +75,9 @@ Here is a module named **example** that gives access to an **admin-keyset**.
 
 ```
 
-The entire module is written within these parentheses. The top level code, like keysets, are defined outside of these parentheses. 
+The entire module is written within these parentheses. The top level code, like keysets, are defined outside of these parentheses.
 
-The basic idea of modules is simple, but the structure of the code and the actual logic within the module can get pretty complicated. For that reason, it’s helpful to start by focusing on the basic syntax and structure of existing modules. 
+The basic idea of modules is simple, but the structure of the code and the actual logic within the module can get pretty complicated. For that reason, it’s helpful to start by focusing on the basic syntax and structure of existing modules.
 
 ___
 
@@ -91,7 +91,7 @@ You can find examples using the Module Explorer in the <a href="https://pact.kad
 
 #### **Hello World**
 
-From the Module Explorer, open the Hello World Smart Contract. If you’re interested, this smart contract is explained in depth in the <a href="https://pactlang.org/beginner/hello-world-with-pact/" target="_blank">Hello World with Pact</a>.
+From the Module Explorer, open the Hello World Smart Contract. If you’re interested, this smart contract is explained in depth in the <a href="./beginner/hello-world-with-pact.html target="_blank">Hello World with Pact</a>.
 
 
 Notice that the pattern of this smart contract is similar to the outline described above.
@@ -117,7 +117,7 @@ In this case, the module code only contains a simple function named **hello**. L
 
 Next, take some time to look through the simple payment module. From the Module Explorer, select **open** on **Simple Payment** to open this smart contract in the online editor.
 
-Once again, you’ll notice the same pattern. This time, the smart contract includes a few other features. 
+Once again, you’ll notice the same pattern. This time, the smart contract includes a few other features.
 
 **Included in the Simple Payment Smart Contract**
 
@@ -135,7 +135,7 @@ View the summary of this contract below and take some time to investigate the ac
 
 (module payments 'admin-keyset
    ;; module code goes here
- 
+
    ;; define schemas
    ;;    ex. defschema payments...
 
@@ -160,7 +160,7 @@ While you may not fully understand each line of code quite yet, there are a few 
 
 First, schemas and tables are defined inside of modules, but tables are created outside of modules. Table and schema definitions include built in functions including defschema, deftable, and create-table. You’ll learn more about each of these functions in the **Pact Schemas and Tables tutorial**.
 
-Next, there are some new Pact built in functions that you may have not seen before. 
+Next, there are some new Pact built in functions that you may have not seen before.
 
 **Contract Built-in functions include:**
 
@@ -169,12 +169,12 @@ Next, there are some new Pact built in functions that you may have not seen befo
 * <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#with-read" target="_blank">with-read</a>
 
 
-We’ll also go over each of these in more detail in later tutorials. You can explore the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html" target="_blank">Pact Language Reference built-in functions</a> to learn more about each of them now if you’d like. 
+We’ll also go over each of these in more detail in later tutorials. You can explore the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html" target="_blank">Pact Language Reference built-in functions</a> to learn more about each of them now if you’d like.
 
 ___
 
 ### **Explore Other Modules**
-Other modules include the same basic framework as those included in these simple smart contracts. Take some time now to explore each of the other Smart Contract examples to get more familiar with how they work. 
+Other modules include the same basic framework as those included in these simple smart contracts. Take some time now to explore each of the other Smart Contract examples to get more familiar with how they work.
 
 **Example Modules**
 
@@ -193,7 +193,7 @@ In this tutorial you were introduced to modules, one of the core features of the
 
 The goal for this tutorial wasn’t to help you learn all of the code that can possibly go into creating a module. That’s what most of the entire Pact programming language is built to accomplish. You’ll learn much more about this in later tutorials.
 
-For now, the important takeaway is to understand what a module is, as well as to recognize the key elements that belong inside and outside of Pact modules. 
+For now, the important takeaway is to understand what a module is, as well as to recognize the key elements that belong inside and outside of Pact modules.
 
 Take some time now to continue exploring the examples provided in the Pact Online Editor. When you’re ready, you can learn more about the Pact programming language in our next tutorial.
 

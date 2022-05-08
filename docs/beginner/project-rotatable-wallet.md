@@ -1,6 +1,6 @@
 # Pact Rotatable Wallet
 
-Welcome to this **Rotatable Wallet** project tutorial! 
+Welcome to this **Rotatable Wallet** project tutorial!
 
 Here you’ll create a smart contract named **Rotatable Wallets** that demonstrates many important Pact features that you learned throughout previous tutorials.
 
@@ -31,7 +31,7 @@ ___
 
 ## **Project Overview**
 
-Before getting into the code, take some time to review what you’ll be building. This smart contract can be broken down into steps focused on 4 core areas that include the keysets, module, table, and functions. 
+Before getting into the code, take some time to review what you’ll be building. This smart contract can be broken down into steps focused on 4 core areas that include the keysets, module, table, and functions.
 
 ![1-project-overview](../assets/beginner-tutorials/project-rotatable-wallet/1-project-overview.png)
 
@@ -39,7 +39,7 @@ The details of each step will be described as you progress through the tutorial.
 
 ## **Project Environment Setup**
 
-To get started, choose a project directory and clone the <a href="https://github.com/kadena-io/pact-lang.org-code" target="_blank">project resources</a> into your local environment. 
+To get started, choose a project directory and clone the <a href="https://github.com/kadena-io/pact-lang.org-code" target="_blank">project resources</a> into your local environment.
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-lang.org-code.git
@@ -74,13 +74,13 @@ ___
 
 ## **1. Define Keysets**
 
-Get started with your smart contract by defining it’s keysets. 
+Get started with your smart contract by defining it’s keysets.
 
-The 2 keysets required for this smart contract are a **module-admin-keyset** that will allow users to define and update modules, and an **module-operate-keyset** that will allow users to create accounts. 
+The 2 keysets required for this smart contract are a **module-admin-keyset** that will allow users to define and update modules, and an **module-operate-keyset** that will allow users to create accounts.
 
-Each of these keysets play a specific role that will be defined later in the application. 
+Each of these keysets play a specific role that will be defined later in the application.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Complete define and read the **module-admin-keyset** and the **module-operate-keyset**.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/1-define-keysets/challenge.pact" target="_blank">Challenge</a>
@@ -95,8 +95,8 @@ ___
 
 The next step is to create the module that will contain the logic of your smart contract.
 
-!!! warning "Code Challenge" 
-    Define a module named **auth** that specifies access to the **module-admin** keyset. 
+!!! warning "Code Challenge"
+    Define a module named **auth** that specifies access to the **module-admin** keyset.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/2-define-module/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/2-define-module/solution.pact" target="_blank">Solution</a>
@@ -110,7 +110,7 @@ ___
 
 This smart contract contains a schema named **user** with 2 columns; **nickname** held as a string and **keyset** which is held as a keyset. Use this schema to both define and create a table named **users**.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Define the user schema and table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/3-define-schema-and-table/challenge.pact" target="_blank">Challenge</a>
@@ -123,7 +123,7 @@ ___
 
 ## 4. Create Functions
 
-You're now ready to complete the functions for this module. 
+You're now ready to complete the functions for this module.
 
 | function          | purpose                                                      |
 |-------------------|--------------------------------------------------------------|
@@ -139,8 +139,8 @@ The goal of these functions is to allow users the flexibility they need to creat
 
 In this step, you will create a function that allows the **operate-admin** to add rows to the users table.
 
-!!! warning "Code Challenge" 
-    Define a function named **create-user** that takes 3 arguments; id, nickname, and keyset. Next, restrict access for function calls to the **operate-admin**. Finally, insert a row into the **users** table using the inputs specified by the user. 
+!!! warning "Code Challenge"
+    Define a function named **create-user** that takes 3 arguments; id, nickname, and keyset. Next, restrict access for function calls to the **operate-admin**. Finally, insert a row into the **users** table using the inputs specified by the user.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/4-functions/4.1-create-user/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/4-functions/4.1-create-user/solution.pact" target="_blank">Solution</a>
@@ -152,7 +152,7 @@ ___
 
 ### **4.2 Enforce User**
 
-It’s sometimes useful to restrict access to data to specific users. For example, users may not want others to see the balance of their account or other sensitive information. This can be done in Pact by enforcing access to rows of data using row-level keysets. 
+It’s sometimes useful to restrict access to data to specific users. For example, users may not want others to see the balance of their account or other sensitive information. This can be done in Pact by enforcing access to rows of data using row-level keysets.
 
 The first step toward making this happen is to be able to view the keyset associated with a specific id. The following function shows an example of reading a keyset in a specific row from a given id.
 
@@ -166,8 +166,8 @@ The first step toward making this happen is to be able to view the keyset associ
 
 This function doesn’t yet give any access to the data in a row. It’s purpose is for other functions to call on it in the case that they want to do something like place row level restrictions on data. This will be valuable shortly when you write code that needs to call this function.
 
-!!! warning "Code Challenge" 
-    Define a function named **enforce-user-auth** that returns the keyset associated with a given id. 
+!!! warning "Code Challenge"
+    Define a function named **enforce-user-auth** that returns the keyset associated with a given id.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/4-functions/4.2-enforce-user/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/4-functions/4.2-enforce-user/solution.pact" target="_blank">Solution</a>
@@ -183,7 +183,7 @@ Once you can restrict access to data, you’re ready to allow users to take spec
 
 To do that, you can write a function that utilizes the previous function you created. From there, you can add in functionality that allows users to update their data.
 
-Here is an example function **update-data** that allows users to update existing information. It leverages the previous example function **enforce-keyset-of-id** to make an update to a row in the table **example-table**. 
+Here is an example function **update-data** that allows users to update existing information. It leverages the previous example function **enforce-keyset-of-id** to make an update to a row in the table **example-table**.
 
 ``` clojure
 (defun update-data (id new-data)
@@ -194,7 +194,7 @@ Here is an example function **update-data** that allows users to update existing
 
 This function combined with the previous function allows users with a specific keyset to make updates to restricted information.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Define a function named **change-nickname** that allows users with a specific keyset to update their nickname in the **users** table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/4-functions/4.3-change-nickname/challenge.pact" target="_blank">Challenge</a>
@@ -207,13 +207,13 @@ ___
 
 ### **4.4 Rotate Keyset**
 
-Now that users can update their name, you can apply this same functionality to other information. 
+Now that users can update their name, you can apply this same functionality to other information.
 
 For example, you can allow users to update their keyset. The ability to update keysets is known as ‘rotating keysets’ and this is where the name ‘Rotatable wallets’ came from for this demonstration. This feature is comparable to being able to update a password, and it’s an extremely useful feature to have in an application.
 
 For this final function, use the information learned from previous steps to add rotating keysets as a feature of your smart contract.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Define a function named rotate-keyset that allows the owner of a keyset to change their keyset.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/4-functions/4.4-rotate-keyset/challenge.pact" target="_blank">Challenge</a>
@@ -228,7 +228,7 @@ ___
 
 The last step is to create the **user** table defined within the module.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create the user table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/rotatable-wallet/2-challenges/5-create-table/challenge.pact" target="_blank">Challenge</a>
@@ -238,13 +238,13 @@ ___
 
 ## **Deploy the Smart Contract**
 
-Your Rotatable Wallet smart contract is complete! If you’d like, you can deploy this contract similar to how you would deploy other smart contracts. 
+Your Rotatable Wallet smart contract is complete! If you’d like, you can deploy this contract similar to how you would deploy other smart contracts.
 
 For more information on deploying this smart contract, view the following tutorials.
 
-* <a href="https://pactlang.org/beginner/hello-world-with-pact/" target="_blank">Hello World with Pact</a>
-* <a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Editor</a>
-* <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK</a>
+* <a href="./beginner/hello-world-with-pact.html target="_blank">Hello World with Pact</a>
+* <a href="./beginner/online-editor.html target="_blank">Pact Online Editor</a>
+* <a href="./beginner/pact-on-atom-sdk.html target="_blank">Pact Development on Atom SDK</a>
 
 ___
 

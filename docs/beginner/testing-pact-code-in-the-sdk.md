@@ -13,7 +13,7 @@ Welcome to this introduction to Testing in the SDK!
 * Run REPL file
 * Built-in Error Messages
 
-In this tutorial, you will learn the basics of testing in the SDK to build your own REPL file. This is a great start to begin testing the smart contracts you build locally. 
+In this tutorial, you will learn the basics of testing in the SDK to build your own REPL file. This is a great start to begin testing the smart contracts you build locally.
 
 !!! Summary "Key Takeaway"
       Pact and the Atom SDK provide a powerful testing environment that allows you to build and test Pact programs locally.
@@ -32,25 +32,25 @@ ___
 
 Before starting this tutorial, it helps to have completed the following pre-requisites.
 
-* <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK</a>: The SDK is required for testing in the SDK. You can get up and running with the SDK using this tutorial.
+* <a href="./beginner/pact-on-atom-sdk.html target="_blank">Pact Development on Atom SDK</a>: The SDK is required for testing in the SDK. You can get up and running with the SDK using this tutorial.
 
-* <a href="https://pactlang.org/beginner/project-loans/" target="_blank">Project: Loans</a>: You will be building a REPL file for the Loans project covered in a separate tutorial. This isn’t required but is a helpful way to better understand the smart contract used throughout this tutorial.
+* <a href="./beginner/project-loans.html target="_blank">Project: Loans</a>: You will be building a REPL file for the Loans project covered in a separate tutorial. This isn’t required but is a helpful way to better understand the smart contract used throughout this tutorial.
 
 ___
 
 ## **REPL Overview**
 
-REPL files are used to load and run Pact files using the SDK. 
+REPL files are used to load and run Pact files using the SDK.
 
 REPL stands for read - eval - print - loop. This acronym refers to the idea that given a Pact file, a REPL file is responsible for reading, evaluating, printing, and looping through the code as needed to both run and provide the output of the Pact file.
 
 These are a common part of LISP-like languages such as Pact and they allow you to quickly test the smart contracts you build.
 
-A simple way to load a REPL file is from your terminal as shown below. 
+A simple way to load a REPL file is from your terminal as shown below.
 
 ![1-repl-overview](../assets/beginner-tutorials/test-in-the-sdk/1-repl-overview.png)
 
-Using your terminal window, you will load the REPL file. This includes code that both loads and runs the pact file. The pact file then returns data to the REPL file which  sends the output to your terminal window. 
+Using your terminal window, you will load the REPL file. This includes code that both loads and runs the pact file. The pact file then returns data to the REPL file which  sends the output to your terminal window.
 
 ### **Comparison to Online Editor**
 
@@ -68,9 +68,9 @@ ___
 
 ## **Built-in Functions**
 
-When building a REPL file, there are many built-in functions available to you. 
+When building a REPL file, there are many built-in functions available to you.
 
-These functions are known as the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#repl-only-functions" target="_blank">REPL only functions</a> because they cannot be used in pact files. While all of these built-in functions are valuable, there are some that are more commonly used. 
+These functions are known as the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#repl-only-functions" target="_blank">REPL only functions</a> because they cannot be used in pact files. While all of these built-in functions are valuable, there are some that are more commonly used.
 
 Take some time now to review each of the functions in the documentation as well as the summary of commonly used functions provided below.
 
@@ -89,9 +89,9 @@ ___
 
 ## **Project Environment Setup**
 
-Throughout the rest of this tutorial, you will build a REPL file for yourself. 
+Throughout the rest of this tutorial, you will build a REPL file for yourself.
 
-To follow along from your local environment, clone the repo pact-lang.org-code GitHub repo. 
+To follow along from your local environment, clone the repo pact-lang.org-code GitHub repo.
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-lang.org-code.git
@@ -124,15 +124,15 @@ ___
 
 ## **1. Load Environment Data**
 
-The first step in creating a .repl file is to load the environment keys and data. 
+The first step in creating a .repl file is to load the environment keys and data.
 
-This is similar to what you have seen in the <a href="https://pact.kadena.io/" target="_blank">online editor</a>. Rather than creating this data from the UI like you did before, you now need to program this information into your .repl file. 
+This is similar to what you have seen in the <a href="https://pact.kadena.io/" target="_blank">online editor</a>. Rather than creating this data from the UI like you did before, you now need to program this information into your .repl file.
 
-The online editor allowed you to create keys and keysets using the tool panel as shown below. The **result tab** shows data similar to what you will be writing into your .repl file. 
+The online editor allowed you to create keys and keysets using the tool panel as shown below. The **result tab** shows data similar to what you will be writing into your .repl file.
 
 ![4-keysets](../assets/beginner-tutorials/test-in-the-sdk/4-keysets.png)
 
-You can view the code that represents your keys and keysets using the **Result** tab. 
+You can view the code that represents your keys and keysets using the **Result** tab.
 
 ![5-result](../assets/beginner-tutorials/test-in-the-sdk/5-result.png)
 
@@ -156,8 +156,8 @@ To set up this environment using the .repl file, you will use two separate built
 "Setting transaction data"
 ```
 
-!!! warning "Code Challenge" 
-    For this code challenge, you will use **env-keys** and **env-data** to load the keys and environment data into the .repl file. Use the comments to help guide you, and if you’re unsure how to move forward, take a look at the solution for more details. 
+!!! warning "Code Challenge"
+    For this code challenge, you will use **env-keys** and **env-data** to load the keys and environment data into the .repl file. Use the comments to help guide you, and if you’re unsure how to move forward, take a look at the solution for more details.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/1-load-environment-data/challenge.repl" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/1-load-environment-data/solution.repl" target="_blank">Solution</a>
@@ -169,7 +169,7 @@ ___
 
 ## **Note About Transactions**
 
-Before moving on, there’s an important note to make about transactions. 
+Before moving on, there’s an important note to make about transactions.
 
 When working within REPL files, you can make as many calls to the pact code within a transaction as you like. Any command sent to the blockchain is a transaction, but a command too can have multiple calls, for instance, defining a module with `module` and creating its tables with `create-table` calls.
 
@@ -181,17 +181,17 @@ To successfully execute a transaction you need to both begin the transaction and
 | <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#begin-tx" target="_blank">begin-tx</a> | Begin transaction with optional NAME.                         |
 | <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#commit-tx" target="_blank">commit-tx</a> | Commit transaction.                                          |
 
-It’s valuable to use these built-in functions to group calls into small transactions within your REPL file. 
+It’s valuable to use these built-in functions to group calls into small transactions within your REPL file.
 
 Here’s why this is useful.
 
 **Error Example**
 
-Any error that occurs in a transaction will cause it to roll back and fail to run. 
+Any error that occurs in a transaction will cause it to roll back and fail to run.
 
 While it's possible to place all of your calls within a single transaction, this isn’t a good habit to get into. This will make it difficult to tell where your file is failing and make it difficult to continue testing.
 
-For that reason, be sure to break up your test files into smaller transactions. 
+For that reason, be sure to break up your test files into smaller transactions.
 
 ``` clojure
 (begin-tx)
@@ -207,13 +207,13 @@ For that reason, be sure to break up your test files into smaller transactions.
 (commit-tx)
 ```
 
-Transactions can be grouped together however is most convenient for your testing. Try maintaining a logical order in your transactions for ease of maintenance and readability. 
+Transactions can be grouped together however is most convenient for your testing. Try maintaining a logical order in your transactions for ease of maintenance and readability.
 
 ___
 
 ## **2. Load Pact File**
 
-Pact files are not run by your computer directly, they’re loaded into the .repl file and run from there. Now that you have loaded the environment data, you need to load the pact file into the .repl file. 
+Pact files are not run by your computer directly, they’re loaded into the .repl file and run from there. Now that you have loaded the environment data, you need to load the pact file into the .repl file.
 
 This is done using the built-in **load** function.
 
@@ -221,7 +221,7 @@ This is done using the built-in **load** function.
 |-----------|-----------------------------------------------------------------|
 | <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=built%20in%20functions#load" target="_blank">load</a> | Load and evaluate FILE. |
 
-The syntax for this is simple. 
+The syntax for this is simple.
 
 **load example**
 
@@ -231,7 +231,7 @@ The syntax for this is simple.
 
 All you need to do type load then specify the file path as a string. Pact and REPL files are generally kept in the same folder so you usually only need to specify the name of the pact file.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Load the loans.pact file into the REPL.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/2-load-pact-file/challenge.repl" target="_blank">Challenge</a>
@@ -265,18 +265,18 @@ For this code challenge, you will need to make calls to a few functions from the
 
 Follow the links provided or view the loans.pact file for more details.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Call the **create-a-loan**, **assign-a-loan**, and **sell-a-loan** functions from the loans.pact file and provide your own inputs as needed.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.1-generate-data/challenge.repl" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.1-generate-data/solution.repl" target="_blank">Solution</a>
 
 !!! Note
-       If you have not already completed the <a href="https://pactlang.org/beginner/project-loans/" target="_blank">Project: Loans tutorial</a>, try working through this tutorial to build the entire Loans smart contract for yourself!
+       If you have not already completed the <a href="./beginner/project-loans.html target="_blank">Project: Loans tutorial</a>, try working through this tutorial to build the entire Loans smart contract for yourself!
 
 ### **3.2. Read Loans**
 
-After calling functions used to create, assign, and sell a loan, you can now read some of the data that you created. Similar to before, you will be calling functions from the loans.pact file. Feel free to reference the previous challenge for guidance. 
+After calling functions used to create, assign, and sell a loan, you can now read some of the data that you created. Similar to before, you will be calling functions from the loans.pact file. Feel free to reference the previous challenge for guidance.
 
 Here is a brief overview of the functions you will call in this challenge.
 
@@ -285,7 +285,7 @@ Here is a brief overview of the functions you will call in this challenge.
 | <a href="https://pactlang.org/beginner/project-loans/#59-read-loan-inventory" target="_blank">read-loan-inventory</a>    | Reads all loans in the loan inventory table. |
 | <a href="https://pactlang.org/beginner/project-loans/#510-read-loans-with-status" target="_blank">read-loans-with-status</a> | Reads all loans with a specific status.      |
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Call the read-loan-inventory and read-loans-with-status functions from the loans.pact file and provide your inputs as needed.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/test-in-sdk/2-challenges/3-call-functions/3.2-read-loans/challenge.repl" target="_blank">Challenge</a>
@@ -295,7 +295,7 @@ ___
 
 ## **Run REPL File**
 
-At this point you have completed the REPL file. Congratulations! The last step is to run the file from your terminal to view the output. 
+At this point you have completed the REPL file. Congratulations! The last step is to run the file from your terminal to view the output.
 
 To do this, open your terminal and navigate to the **3-finish** directory from your project folder.
 
@@ -315,7 +315,7 @@ Loan the loans.repl file
 pact> (load "loans.repl")
 ```
 
-You should see an output to your terminal similar to the data shown below. Notice the flags similar to those that you’ve seen throughout the challenges. This is to help you see where the code you wrote is corresponding to the output in the terminal. 
+You should see an output to your terminal similar to the data shown below. Notice the flags similar to those that you’ve seen throughout the challenges. This is to help you see where the code you wrote is corresponding to the output in the terminal.
 
 Take some time now to view the output and see how it aligns with the code you wrote in the REPL file.
 
@@ -371,13 +371,13 @@ Take some time now to view the output and see how it aligns with the code you wr
 
 ```
 
-You can experiment with changing the .repl or .pact files to see how this changes the output in your terminal. 
+You can experiment with changing the .repl or .pact files to see how this changes the output in your terminal.
 
 ___
 
 ## **Built-in Error Messages**
 
-As you’ve seen, you can run REPL files from your terminal to test Pact code. 
+As you’ve seen, you can run REPL files from your terminal to test Pact code.
 
 Another valuable feature in the SDK is that it actually runs these files for you without using the terminal. This helps you spot errors from directly within Atom. Two features that help you spot errors are the error highlighting and the error message.
 
@@ -390,9 +390,9 @@ These are both valuable ways to effectively test and debug your Pact code.
 
 ### **Pact Examples**
 
-To view these features take a look at our **pact-examples** repo. 
+To view these features take a look at our **pact-examples** repo.
 
-Change into your **pact-examples** directory or clone this repo into your project folder if you have not set this project up before. 
+Change into your **pact-examples** directory or clone this repo into your project folder if you have not set this project up before.
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-examples.git
@@ -407,10 +407,10 @@ cd pact-examples
 Open this directory in atom.
 
 ``` terminal
-atom . 
+atom .
 ```
 
-Here you will see many more examples of REPL files along with the smart contracts they are testing. 
+Here you will see many more examples of REPL files along with the smart contracts they are testing.
 
 **Navigate to atoz > keysets > keysets.repl** to view one of these examples.
 
@@ -423,7 +423,7 @@ In this file you will notice the use of a new built-in function named **expect-f
 | <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#expect" target="_blank">expect</a>         | Evaluate expression and verify that it equals what is expected.  |
 | <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#expect-failure" target="_blank">expect-failure</a> | Evaluates the expression and succeed only if it throws an error. |
 
-On line 35, notice the line that states that it expects the real-keyset should fail. 
+On line 35, notice the line that states that it expects the real-keyset should fail.
 
 ``` clojure
 (expect-failure "real keyset should fail"
@@ -432,18 +432,18 @@ On line 35, notice the line that states that it expects the real-keyset should f
 
 You can tell that this test is passing because there is no error message or highlighting.
 
-To make this test fail, try changing **keyset-real** to **keyset-carol**. 
+To make this test fail, try changing **keyset-real** to **keyset-carol**.
 
 ``` clojure
 (expect-failure "real keyset should fail"
   (enforce-keyset 'keyset-carol))
 ```
 
-After making this change, the filename **keysets.repl** should now have a red squiggle under it and line 35 should have a red dot next to it. Both of these indicate that a test is failing within the REPL file. 
+After making this change, the filename **keysets.repl** should now have a red squiggle under it and line 35 should have a red dot next to it. Both of these indicate that a test is failing within the REPL file.
 
 ![7-errors](../assets/beginner-tutorials/test-in-the-sdk/7-errors.png)
 
-To get more information, you can click the dot on line 35 and select the triangle to view the source of the error as shown below. Using this detailed information you can better test and debug the code from within your Pact smart contract. 
+To get more information, you can click the dot on line 35 and select the triangle to view the source of the error as shown below. Using this detailed information you can better test and debug the code from within your Pact smart contract.
 
 !!! Note
       To understand exactly what is failing and why, it helps to look through both the .pact and .repl files for more information. Take some time now to study the keyset example files as well as a few other examples to practice testing code and debugging errors.
@@ -454,7 +454,7 @@ ___
 
 Congratulations on completing this introduction to **Testing Pact Code in the SDK**!
 
-In this tutorial, you learned both the basics of testing in the SDK and how to build your own REPL file. This is a great start to begin testing the smart contracts you build locally. From here, you can experiment with changing the .repl or .pact files to see how this changes the output in your terminal. 
+In this tutorial, you learned both the basics of testing in the SDK and how to build your own REPL file. This is a great start to begin testing the smart contracts you build locally. From here, you can experiment with changing the .repl or .pact files to see how this changes the output in your terminal.
 
 Using this workflow, you can begin building and testing files however you would like.
 

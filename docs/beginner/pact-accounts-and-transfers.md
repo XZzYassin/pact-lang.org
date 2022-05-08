@@ -42,7 +42,7 @@ ___
 
 ## **Project Environment Setup**
 
-To get started, choose a project directory and clone the project resources into your local environment. 
+To get started, choose a project directory and clone the project resources into your local environment.
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-lang.org-code.git
@@ -76,25 +76,25 @@ ___
 
 ## **1. Module and Keyset**
 
-The first step is to set up the module and keysets for the smart contract. 
+The first step is to set up the module and keysets for the smart contract.
 
-!!! warning "Code Challenge" 
-    Define and read the admin-keyset, create the payments module, and give the admin-keyset access to the module. 
-    
+!!! warning "Code Challenge"
+    Define and read the admin-keyset, create the payments module, and give the admin-keyset access to the module.
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/1-module-and-keysets/solution.pact" target="_blank">Solution</a>
 
 
 !!! Note
-    If you’re unfamiliar with modules and keyset, our <a href="https://pactlang.org/beginner/pact-modules/" target="_blank">Pact Modules Tutorial</a> is a great place to get started. 
+    If you’re unfamiliar with modules and keyset, our <a href="./beginner/pact-modules.html target="_blank">Pact Modules Tutorial</a> is a great place to get started.
 
 ___
 
 ## **2. Define Schema and Table**
 
-The next step is to define the schema and table for the smart contract. 
+The next step is to define the schema and table for the smart contract.
 
-The **payments-table**, will keep track of the balance of the accounts and associate that to the account’s keyset. 
+The **payments-table**, will keep track of the balance of the accounts and associate that to the account’s keyset.
 
 **Payments Table**
 
@@ -103,7 +103,7 @@ The **payments-table**, will keep track of the balance of the accounts and assoc
 | balance   | decimal   |
 | keyset    | keyset    |
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Define a schema and table with columns **balance** and **keyset**.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/2-schema-and-table/challenge.pact" target="_blank">Challenge</a>
@@ -117,7 +117,7 @@ ___
 
 ## **3. Functions**
 
-This smart contract will contain 3 functions create-account, get-balance, and pay. Each of these are essential functions to allow users to manage their accounts. 
+This smart contract will contain 3 functions create-account, get-balance, and pay. Each of these are essential functions to allow users to manage their accounts.
 
 !!! Note
     You can review each of the function types in the <a href="https://pactlang.org/beginner/pact-schemas-and-tables/#table-built-in-functions" target="_blank">Schemas and Tables Tutorial</a> as well as the <a href="https://pactlang.org/beginner/pact-language-basics/#built-in-functions" target="_blank">Pact Language Basics Tutorial</a>.
@@ -126,22 +126,22 @@ This smart contract will contain 3 functions create-account, get-balance, and pa
 
 First, add a function that allows the administrator to create accounts. This will allow you to add as many accounts as you’d like.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function **create-account** that allows administrator to create accounts.
-    
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.1-create-account/solution.pact" target="_blank">Solution</a>
 
 !!! Note
-    Try using <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce#enforce" target="_blank">enforce</a> to regulate who has access to create an account. 
+    Try using <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=enforce#enforce" target="_blank">enforce</a> to regulate who has access to create an account.
 
 ###**3.2 Get Balance**
 
-Now that you can create accounts, it is helpful to be able to view the balance of these accounts. In this case, we’ll allow both users and administrators to view the balance. 
+Now that you can create accounts, it is helpful to be able to view the balance of these accounts. In this case, we’ll allow both users and administrators to view the balance.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function **get-balance** that allows administrators and users to view the balance of their account.
-    
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.2-function-get-balance/solution.pact" target="_blank">Solution</a>
 
@@ -149,9 +149,9 @@ Now that you can create accounts, it is helpful to be able to view the balance o
 
 Next, you’ll create the function that allows one account to pay another account. This allows accounts to transfer value from their account to another to begin making payments and managing their finances.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function **pay** that allows an account to pay another account.
-    
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/3-functions/3.3-function-pay/solution.pact" target="_blank">Solution</a>
 
@@ -161,14 +161,14 @@ ___
 
 You have now completed the module. Outside of the module you can create the table that you defined earlier.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create the **payments-table**.
-    
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/4-create-table/solution.pact" target="_blank">Solution</a>
 
 !!! Note
-    At this point you have completed the module. You will notice the previous challenge containing a final parenthesis to close out the module. The remaining steps are meant to help you call functions from within the module you created to put your smart contract to use. 
+    At this point you have completed the module. You will notice the previous challenge containing a final parenthesis to close out the module. The remaining steps are meant to help you call functions from within the module you created to put your smart contract to use.
 
 ___
 
@@ -176,15 +176,15 @@ ___
 
 The next step is to create the accounts that will transfer value.
 
-For this tutorial, create 2 accounts. 
+For this tutorial, create 2 accounts.
 * Sarah
 * James
 
 To do this, you use the **create-account** function built earlier. This function takes 3 arguments; **id**, **initial-balance**, and **keyset**.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Call the **create-account** function to create accounts for **Sarah** and **James**.
-    
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/5-create-accounts/solution.pact" target="_blank">Solution</a>
 
@@ -192,11 +192,11 @@ ___
 
 ## **6. Make Payment**
 
-The final step is to make a payment from one account to another. You can do this using the pay function created earlier. 
+The final step is to make a payment from one account to another. You can do this using the pay function created earlier.
 
-!!! warning "Code Challenge" 
-    Use the pay function to transfer **25.0** to **James** from **Sarah’s** account. After making the payment, read the balance of both Sarah and James. 
-    
+!!! warning "Code Challenge"
+    Use the pay function to transfer **25.0** to **James** from **Sarah’s** account. After making the payment, read the balance of both Sarah and James.
+
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/payments/2-challenges/6-make-payment/solution.pact" target="_blank">Solution</a>
 
@@ -204,14 +204,14 @@ ___
 
 ### **Deploy the Smart Contract**
 
-Congratulations, at this point you have completed the Simple Payment smart contract! 
+Congratulations, at this point you have completed the Simple Payment smart contract!
 
 If you’d like, you can try deploying this smart contract. You can deploy this contract using the **Pact Online Editor** or from the **Pact Atom SDK**. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.
 
-For help getting started and deploying in each of these environments, try the following tutorials. 
+For help getting started and deploying in each of these environments, try the following tutorials.
 
-* <a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Editor</a>
-* <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK Tutorial</a>
+* <a href="./beginner/online-editor.html target="_blank">Pact Online Editor</a>
+* <a href="./beginner/pact-on-atom-sdk.html target="_blank">Pact Development on Atom SDK Tutorial</a>
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 Congratulations on completing the **Accounts and Transfers Tutorial**!
 
-In this tutorial, you built a **Simple Payment** application that creates accounts, views account balances, and makes payments between accounts. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers. 
+In this tutorial, you built a **Simple Payment** application that creates accounts, views account balances, and makes payments between accounts. This is an important function of smart contracts and will set you up to create more complex applications using accounts and transfers.
 
 This is a key feature of many smart contracts and can be extended into all types of use cases. Take some time now to experiment with these features to try them out in creative new ways.
 

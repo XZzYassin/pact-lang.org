@@ -13,10 +13,10 @@ Welcome to this tutorial on Pact Contract Interaction!
 * Run the Smart Contract
 * Review
 
-The goal of this tutorial is to learn the basics of building interactions between modules in Pact. You will go over some of the fundamentals, then build a smart contract that allows users to both make and authorize payments using multiple Pact modules. 
+The goal of this tutorial is to learn the basics of building interactions between modules in Pact. You will go over some of the fundamentals, then build a smart contract that allows users to both make and authorize payments using multiple Pact modules.
 
 !!! Summary "Key Takeaway"
-      Modules can make use of functions within other modules. This is done first with <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#use" target="_blank">use</a>, and then by calling the functions from within the module you are using. Each of these files are then loaded into the REPL where you can specify function calls and test interactions between these modules. 
+      Modules can make use of functions within other modules. This is done first with <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#use" target="_blank">use</a>, and then by calling the functions from within the module you are using. Each of these files are then loaded into the REPL where you can specify function calls and test interactions between these modules.
 ___
 
 ## **Pact Contract Interaction Tutorial**
@@ -29,13 +29,13 @@ ___
 
 ## **Pact Contract Interaction Overview**
 
-Contract interaction allows you to set up more complex smart contracts by working with modules across multiple files. Having access to separate files allows you to break up your smart contracts into more manageable sizes. It also allows you to use helpful files that others have created. 
+Contract interaction allows you to set up more complex smart contracts by working with modules across multiple files. Having access to separate files allows you to break up your smart contracts into more manageable sizes. It also allows you to use helpful files that others have created.
 
-In the image below, you can see that there are 2 files, **module-1** and **module-2**. In this case, **module-2** is using **module-1** to call functions that exist within the module. The REPL file then loads and uses both of these modules to call functions and facilitate the interaction. 
+In the image below, you can see that there are 2 files, **module-1** and **module-2**. In this case, **module-2** is using **module-1** to call functions that exist within the module. The REPL file then loads and uses both of these modules to call functions and facilitate the interaction.
 
 ![1-overview](../assets/beginner-tutorials/contract-interaction/1-overview.png)
 
-The three most helpful Pact functions to keep in mind for Contract Interaction are **load**, **use**, and **function calls**. 
+The three most helpful Pact functions to keep in mind for Contract Interaction are **load**, **use**, and **function calls**.
 
 **Load**
 
@@ -53,13 +53,13 @@ Import an existing module into a namespace.
 (use MODULE)
 ```
 
-Once the interaction is set up between files, all function calls can be done the same as if the function existed within that file. 
+Once the interaction is set up between files, all function calls can be done the same as if the function existed within that file.
 
 ___
 
 ## **Project Overview**
 
-The idea of working with multiple modules and files is easiest to demonstrate with an example. For that reason, the rest of this tutorial is focused on getting you up and running with your own project. 
+The idea of working with multiple modules and files is easiest to demonstrate with an example. For that reason, the rest of this tutorial is focused on getting you up and running with your own project.
 
 Before getting started with this application, take a look at the visual overview. This provides a summary of each of the features you will be creating for the Pact Contract Interaction project.
 
@@ -80,10 +80,10 @@ Each number in the image corresponds to one of the files you will work with.
 !!! Note
       Both auth.pact and payments.pact are smart contracts that you have worked with in previous tutorials. If you would like to learn more about these smart contracts, feel free to view each of their tutorials.
 
-      * **Auth Module:** <a href="https://pactlang.org/beginner/project-rotatable-wallet/" target="_blank">Project: Rotatable Wallet</a>
-      * **Payments Module:** <a href="https://pactlang.org/beginner/pact-accounts-and-transfers/" target="_blank">Accounts and Transfers</a>
+      * **Auth Module:** <a href="./beginner/project-rotatable-wallet.html target="_blank">Project: Rotatable Wallet</a>
+      * **Payments Module:** <a href="./beginner/pact-accounts-and-transfers.html target="_blank">Accounts and Transfers</a>
 
-There’s not much code to write for this project. Most of it has been written previously in the tutorials linked above. For this tutorial, focus on understanding the interactions between the smart contracts, and to take some time to study how the functions are interacting with each other. 
+There’s not much code to write for this project. Most of it has been written previously in the tutorials linked above. For this tutorial, focus on understanding the interactions between the smart contracts, and to take some time to study how the functions are interacting with each other.
 
 Making the conceptual leap toward understanding the interactions between modules is going to be extremely valuable as you make more complicated smart contracts.
 
@@ -91,7 +91,7 @@ ___
 
 ## **Project Environment Setup**
 
-To get started, choose a project directory and clone the project resources into your local environment. 
+To get started, choose a project directory and clone the project resources into your local environment.
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-lang.org-code.git
@@ -127,13 +127,13 @@ ___
 The first step of this project is to write the function that you will call from the **payments** smart contract. You will write this function within the **auth** smart contract.
 
 !!! Note
-      Navigate to **1-start/auth.pact** or to **2-challenges/1-auth-pact** depending on how you prefer to follow along. 
+      Navigate to **1-start/auth.pact** or to **2-challenges/1-auth-pact** depending on how you prefer to follow along.
 
 ### **1.1 Enforce User Auth**
 
 The function you will write will enforce user authentication for payments made with accounts. This will be a valuable function for restricting access to either admins or account users, ensuring each user is the only person that has control over their account.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Define a function enforce-user-auth that you can use to verify user authorization.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/1-auth-pact/1.1-enforce-user-auth/challenge.pact" target="_blank">Challenge</a>
@@ -146,12 +146,12 @@ ___
 
 ## **2. Payments Pact File**
 
-Next, you will work on the **payments.pact** file. 
+Next, you will work on the **payments.pact** file.
 
 The goal is to use the **auth** module, then call the function you wrote within the **payments** module to specify authorization for users.
 
 !!! Note
-      Navigate to **1-start/payments.pact or to 2-challenges/2-payments-pact** depending on how you prefer to follow along. 
+      Navigate to **1-start/payments.pact or to 2-challenges/2-payments-pact** depending on how you prefer to follow along.
 
 ### **2.1 Use Auth**
 
@@ -165,7 +165,7 @@ The syntax for **use** looks like this.
 
 It’s simple but extremely powerful! This is what will allow you to call functions from the **auth** module.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take a moment now to **use** the **auth** module from within the **payments** module.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.1-use-auth/challenge.pact" target="_blank">Challenge</a>
@@ -183,7 +183,7 @@ Since you now have access to the auth module, you can begin working with its fun
 
 Take some time now to add this new functionality to your smart contract.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Call **enforce-user-auth** from within the **create-account** function to authorize that the user is an administrator.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.2-create-account/challenge.pact" target="_blank">Challenge</a>
@@ -191,14 +191,14 @@ Take some time now to add this new functionality to your smart contract.
 
 ### **2.3 Get Balance**
 
-Another time you may want to authorize a user is when checking the balance of an account. 
+Another time you may want to authorize a user is when checking the balance of an account.
 
-The **payment** modules **get-balance** function is an excellent use case for this. This time, both the administrator and the owner of the account should have access to view the account balance. 
+The **payment** modules **get-balance** function is an excellent use case for this. This time, both the administrator and the owner of the account should have access to view the account balance.
 
 Similar to before, check for authorization within the **get-balance** function.
 
-!!! warning "Code Challenge" 
-    Call **enforce-user-auth** from within the **get-balance** function to authorize that function is called by the administrator. 
+!!! warning "Code Challenge"
+    Call **enforce-user-auth** from within the **get-balance** function to authorize that function is called by the administrator.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.3-get-balance/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.3-get-balance/solution.pact" target="_blank">Solution</a>
@@ -207,13 +207,13 @@ Similar to before, check for authorization within the **get-balance** function.
 
 Finally, it’s important that payments are authorized by the owner of the account. This will ensure that only the person who has the money is able to send it to others.
 
-!!! warning "Code Challenge" 
-    Finish off the **payment** module by authorizing that the payment is being sent by the owner of the account. 
+!!! warning "Code Challenge"
+    Finish off the **payment** module by authorizing that the payment is being sent by the owner of the account.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.4-pay/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/2-payments-pact/2.4-pay/solution.pact" target="_blank">Solution</a>
 
-That completes the payment module. 
+That completes the payment module.
 
 You are now ready to set up this contract interaction using the **payments.repl** file!
 
@@ -221,10 +221,10 @@ ___
 
 ## **3. Payments REPL File**
 
-You can now finish this project by completing on the **payments.repl** file. 
+You can now finish this project by completing on the **payments.repl** file.
 
 !!! Note
-      Navigate to **1-start/payments.repl** or to **2-challenges/3-payments-repl** depending on how you prefer to follow along. 
+      Navigate to **1-start/payments.repl** or to **2-challenges/3-payments-repl** depending on how you prefer to follow along.
 
 The goal is to use both the **auth** and **payments** module, then coordinate interactions between them.
 
@@ -240,22 +240,22 @@ This is done using <a href="https://pact-language.readthedocs.io/en/latest/pact-
 
 Try using **load** to complete the code challenge.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Load the **auth** module into the **payments.repl** file.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.1-load-auth-module/challenge.repl" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.1-load-auth-module/solution.repl" target="_blank">Solution</a>
 
 !!! Note
-      Transactions and loading are covered in more detail in <a href="https://pactlang.org/beginner/testing-pact-code-in-the-sdk/" target="_blank">Testing Pact Code in the SDK</a>.
+      Transactions and loading are covered in more detail in <a href="./beginner/testing-pact-code-in-the-sdk.html target="_blank">Testing Pact Code in the SDK</a>.
 
 ### **3.2 Load Payments Module**
 
 Next, you need to load the **payments** module into the **payments.repl** file.
 
-This can be done the same way as you did with the **auth** module. 
+This can be done the same way as you did with the **auth** module.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Load the **payments** module into the **payments.repl** file.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.2-load-payments-module/challenge.repl" target="_blank">Challenge</a>
@@ -263,15 +263,15 @@ This can be done the same way as you did with the **auth** module.
 
 ### **3.3 Use Auth Module**
 
-You now have access to both the auth and payments module from within the **payments.repl** file. After loading each file, you also need to specify that you are using them. 
+You now have access to both the auth and payments module from within the **payments.repl** file. After loading each file, you also need to specify that you are using them.
 
-Like before, this can be done with the special form **use**. 
+Like before, this can be done with the special form **use**.
 
 ``` clojure
 (use MODULE)
 ```
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Use the **auth** module from within the **payments.repl** file.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.3-use-auth-module/challenge.repl" target="_blank">Challenge</a>
@@ -279,28 +279,28 @@ Like before, this can be done with the special form **use**.
 
 ### **3.4 Use Payments Module**
 
-Finally, you need to use the payments module. Write one final line of code that uses the payments module and completes your set up for contract interaction. 
+Finally, you need to use the payments module. Write one final line of code that uses the payments module and completes your set up for contract interaction.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Use the **payments** module from within the **payments.repl** file.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.4-use-payments-module/challenge.repl" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/interaction/2-challenges/3-payments-repl/3.4-use-payments-module/solution.repl" target="_blank">Solution</a>
 
-You are now finished setting up your contract interaction. Congratulations! 
+You are now finished setting up your contract interaction. Congratulations!
 
 ___
 
 ## **4. Run REPL File**
 
-After completing your contract interaction project, you can now see it all work together. 
+After completing your contract interaction project, you can now see it all work together.
 
-To do this, navigate back to your terminal. 
+To do this, navigate back to your terminal.
 
 From the terminal, you can navigate into **1-start** folder if you have worked within this directory. If not, you can also navigate to the **3-finish** folder for an example of the completed application.
 
 ``` terminal
-cd 3-finish 
+cd 3-finish
 ```
 
 Open Pact.

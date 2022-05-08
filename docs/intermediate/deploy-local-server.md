@@ -38,7 +38,7 @@ brew install kadena-io/pact/pact
 ```
 
 !!! Note
-      For more information on installing Pact, you can view the <a href="https://github.com/kadena-io/pact" target="_blank">Pact GitHub page</a>. You can also view <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">8. Atom SDK </a>from the Pact Beginner tutorial series for more information.
+      For more information on installing Pact, you can view the <a href="https://github.com/kadena-io/pact" target="_blank">Pact GitHub page</a>. You can also view <a href="./beginner/pact-on-atom-sdk.html target="_blank">8. Atom SDK </a>from the Pact Beginner tutorial series for more information.
 
 ### **Install pact-lang-API**
 
@@ -168,7 +168,7 @@ from: entity name for addressing private messages
 to: entity names for addressing private messages
 ```
 
-Here you’ll see that the format includes keys such as code, codefile, data, datafile, keypairs, nonce, from, and to.  
+Here you’ll see that the format includes keys such as code, codefile, data, datafile, keypairs, nonce, from, and to.
 
 Each of these have their own use case but only the **code** and **keypairs** are required. Looking at your example.yaml file, you can see that these 2 keys are included.
 

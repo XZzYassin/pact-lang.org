@@ -2,7 +2,7 @@
 
 ### **What is Pact?**
 
-Pact is a human-readable smart contract language. 
+Pact is a human-readable smart contract language.
 
 It allows anyone to write clearly, directly and safely onto a blockchain — a true innovation for secure and simple smart contract development. Pact will enable you to create entirely new business models and on-chain services.
 
@@ -16,7 +16,7 @@ These free tutorials have no prerequisites. Learn whenever and however you want 
 
 ### **Get Started**
 
-Start with our <a href="https://pactlang.org/beginner/welcome-to-pact/" target="_blank">Beginner Tutorial Series</a> which covers Pact’s fundamental concepts, followed by real smart contract projects you can deploy to our Testnet.
+Start with our <a href="./beginner/welcome-to-pact.html target="_blank">Beginner Tutorial Series</a> which covers Pact’s fundamental concepts, followed by real smart contract projects you can deploy to our Testnet.
 
 ### **Connect with our community**
 

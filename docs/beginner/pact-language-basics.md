@@ -16,9 +16,9 @@ In this tutorial you'll learn some fundamental concepts you need to get started 
       The <a href="https://pact-language.readthedocs.io/en/latest/" target="_blank">Pact Language Reference</a> includes an overview of the syntax, basic commands, and built-in functions you’ll use to create smart contracts. By getting familiar with these commands, you’ll be prepared to build simple and safe smart contracts with the Pact programming language.
 
 !!! Tip "Follow Along"
-       Open the online editor at <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io</a> to follow along with this tutorial. You can run each of the commands described to get more familiar with the Pact programming language. 
-       
-       View the <a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Code Editor Tutorial</a> for more information on running Pact commands.
+       Open the online editor at <a href="https://pact.kadena.io/" target="_blank">pact.kadena.io</a> to follow along with this tutorial. You can run each of the commands described to get more familiar with the Pact programming language.
+
+       View the <a href="./beginner/online-editor.html target="_blank">Pact Online Code Editor Tutorial</a> for more information on running Pact commands.
 ___
 
 ## **Pact Language Basics Tutorial**
@@ -35,7 +35,7 @@ To get started with the Pact Language Basics, navigate to the <a href="https://p
 
 ![1-pact-language-reference](../assets/beginner-tutorials/pact-language-basics/1-pact-language-reference.png)
 
-If you haven’t already, take some time to review this documentation to better understand the Pact language. 
+If you haven’t already, take some time to review this documentation to better understand the Pact language.
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 Running basic operations in Pact is simple. Try running each of the commands below in your editor to get more familiar with basic Pact commands.
 
-!!! Note 
+!!! Note
       If you are comfortable with data types from other languages, feel free to skip to the built-in functions section. Pact follows conventional standards that are reviewed here to help those get started who may be new to programming.
 
 #### **Integer**
@@ -67,7 +67,7 @@ pact > 19
 
 #### **Decimals**
 
-Decimals are any values that include a decimal. 
+Decimals are any values that include a decimal.
 
 ``` terminal
 pact > 25.3
@@ -96,9 +96,9 @@ There is also an alternative way to represent strings using Pact.
 pact > `hello
 hello
 ```
-Preceding strings with a single ` is commonly used to mark unique items such as function or table names. It does not support whitespace or multi-line strings, but can be a helpful way to identify strings more succinctly. 
+Preceding strings with a single ` is commonly used to mark unique items such as function or table names. It does not support whitespace or multi-line strings, but can be a helpful way to identify strings more succinctly.
 
-These are referred to as <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#symbols" target="_blank">symbols</a>. 
+These are referred to as <a href="https://pact-language.readthedocs.io/en/latest/pact-reference.html#symbols" target="_blank">symbols</a>.
 
 #### **Boolean**
 Booleans include true and false.
@@ -126,10 +126,10 @@ pact > { "type": "cat", "name": "Scratchy", "age": 6 }
   , "age": 6}
 ```
 
-This object describes a pet cat named Scratchy who’s 6 years old. 
+This object describes a pet cat named Scratchy who’s 6 years old.
 
 #### **Make a List of Objects**
-Pact also allows you to make a list of objects. 
+Pact also allows you to make a list of objects.
 
 ``` terminal
 pact > [
@@ -139,7 +139,7 @@ pact > [
 
 [{"type": "cat"
   , "name": "Scratchy"
-  , "age": 6} 
+  , "age": 6}
  {"type": "dog"
   , "name": "Fluffy"
   , "age": 3}]
@@ -203,7 +203,7 @@ After getting familiar with the Pact language syntax, you are ready to start wor
 
 ![3-built-in-functions](../assets/beginner-tutorials/pact-language-basics/3-built-in-functions.png)
 
-As you’ll see, there are many functions organized into a few key categories. 
+As you’ll see, there are many functions organized into a few key categories.
 
 **Pact Standard Library Built-in Function Categories**
 
@@ -224,7 +224,7 @@ ___
 Some of the simplest built in functions are the arithmetic operations. In Pact you can also add, subtract, multiply, or divide by changing the operator.
 
 !!! Note
-      Pact uses prefix notation for math operators. This is common in LISP like languages like Pact. Prefix notation means that the operator precedes the 2 values it’s performing the operation on. 
+      Pact uses prefix notation for math operators. This is common in LISP like languages like Pact. Prefix notation means that the operator precedes the 2 values it’s performing the operation on.
 
 #### **Add 2 Numbers**
 For example, by typing the following operation into your terminal should return 25.
@@ -245,7 +245,7 @@ Have a look at the expression below followed by its Pact equivalent. Can you tel
 ;; Example: 5 + 2 - 4 = 3
 ;; Pact > ( + 5 ( - 2 4 ) )  = 3
 ```
-In this case, Pact evaluates 2 - 4, to get -2, then evaluates -2 + 5 to get the final answer of 3. 
+In this case, Pact evaluates 2 - 4, to get -2, then evaluates -2 + 5 to get the final answer of 3.
 
 ___
 
@@ -255,7 +255,7 @@ Another group of helpful operators is the comparison operators. These check whet
 
 **Here’s a table showing each of the comparison operators available in Pact.**
 
-Along with arithmetic operators and comparison operators, Pact supports boolean, exponential, rounding, and many other common operators. You can learn more about each of these in the operator documentation. 
+Along with arithmetic operators and comparison operators, Pact supports boolean, exponential, rounding, and many other common operators. You can learn more about each of these in the operator documentation.
 
 |    |                             |                               |
 |----|-----------------------------|-------------------------------|
@@ -266,19 +266,19 @@ Along with arithmetic operators and comparison operators, Pact supports boolean,
 | >  | True if X > Y.              | (> 1 3) = false               |
 | >= | True if X >= Y.             | (>= 1 3) = false              |
 
-Along with arithmetic operators and comparison operators, Pact supports boolean, exponential, rounding, and many other common operators. You can learn more about each of these in the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#operators" target="_blank">operator documentation</a>. 
+Along with arithmetic operators and comparison operators, Pact supports boolean, exponential, rounding, and many other common operators. You can learn more about each of these in the <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html#operators" target="_blank">operator documentation</a>.
 
 ___
 
 ### **General Built-in Functions**
 
-General functions are responsible for common tasks like manipulating lists, assigning values, checking values, and have many other use cases. 
+General functions are responsible for common tasks like manipulating lists, assigning values, checking values, and have many other use cases.
 
 ### **At**
 The first function listed on this page is <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=at#at" target="_blank">at</a>
-. 
+.
 
-To run the **at** function, type the following command into your terminal and hit enter. 
+To run the **at** function, type the following command into your terminal and hit enter.
 
 ``` terminal
 pact > (at 1 [1 2 3])
@@ -297,9 +297,9 @@ Scratchy
 ```
 
 ### **Bind**
-<a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=at#bind" target="_blank">**Bind**</a> allows you to map a variable to a value from within an object.  
+<a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=at#bind" target="_blank">**Bind**</a> allows you to map a variable to a value from within an object.
 
-To create a binding, use the keyword **bind** followed by a source object. Follow this object with another object containing a specific value within the source using the := symbol. 
+To create a binding, use the keyword **bind** followed by a source object. Follow this object with another object containing a specific value within the source using the := symbol.
 
 ``` terminal
 pact > (bind { "a": 1, "b": 2 } { "a" := a-value } a-value)
@@ -318,7 +318,7 @@ Bindings are valuable when you want to bind the values of a table to a variable.
 ```
 This example reads a table named **payments** that includes a user **from** that is sending a balance. A binding is used in this case to map the **balance**, which is a column in the table, to the value of **from-bal** that is provided by the user.
 
-This allows you to call the balance of the user using the variable **balance** rather than the variable **from-bal**. 
+This allows you to call the balance of the user using the variable **balance** rather than the variable **from-bal**.
 
 
 ### **Map**
@@ -332,7 +332,7 @@ pact > (map (+ 1) [1 2 3])
 ```
 After running this command, a new list is returned with the value 1 added to each element within the original list.
 
-You can also use this operation to map other values, including strings. For example, if you have a list of names, you can map “Hello ” to each of them to returning a friendly message for each list item. 
+You can also use this operation to map other values, including strings. For example, if you have a list of names, you can map “Hello ” to each of them to returning a friendly message for each list item.
 
 
 ``` terminal
@@ -350,14 +350,14 @@ After running this command, a new list is returned with the value “Hello ” a
 
 <a href="https://pact-language.readthedocs.io/en/latest/pact-functions.html?highlight=format#format" target="_blank">**Format**</a> allows you to piece messages together using a mix of strings and variables. Formatting is great to use any time you need to send messages to your users.
 
-To get started with the format function, paste the example from the documentation into your terminal. When you run this, you’ll see that what you get back is a string that inserts the variables provided in the postfix into the original string where the brackets are located.  
+To get started with the format function, paste the example from the documentation into your terminal. When you run this, you’ll see that what you get back is a string that inserts the variables provided in the postfix into the original string where the brackets are located.
 
 ``` clojure
 (format "My {} has {}" ["dog" "fleas"])
 "My dog has fleas"
 ```
 
-You can now place whatever values you’d like into this string. 
+You can now place whatever values you’d like into this string.
 
 The first set of curly brackets corresponds to the first value in the list, the 2nd corresponds to the 2nd, and so on for as many values as exist.
 
@@ -368,7 +368,7 @@ ___
 
 Coming up, you’ll create a few functions for yourself. You can do this in the <a href="https://pact.kadena.io/" target="_blank">Pact Online Editor</a> to get some practice creating and running functions.
 
-Before creating your functions, take a moment to create a keyset and module. 
+Before creating your functions, take a moment to create a keyset and module.
 
 ``` clojure
 (define-keyset 'admin-keyset (read-keyset "admin-keyset"))
@@ -384,9 +384,9 @@ ___
 
 ## **Create a Function**
 
-While many built-in functions are provided for you with the Pact Standard Library, you’ll often create your own functions. 
+While many built-in functions are provided for you with the Pact Standard Library, you’ll often create your own functions.
 
-Here is the syntax used to create a function in Pact. 
+Here is the syntax used to create a function in Pact.
 
 ``` clojure
 (defun returnPhrase (a b)
@@ -398,14 +398,14 @@ In this example, a function named returnPhrase will accept inputs a and b.
 
 ## **Format a String**
 
-For your first function, try creating a phrase using the built-in **format** function from earlier. 
+For your first function, try creating a phrase using the built-in **format** function from earlier.
 
 ``` clojure
 (format "My {} has {}" ["dog" "fleas"])
 "My dog has fleas"
 ```
 
-By creating a function, you can take any two inputs from a user and return a formatted string value. 
+By creating a function, you can take any two inputs from a user and return a formatted string value.
 
 ``` clojure
 (define-keyset 'admin-keyset (read-keyset "admin-keyset"))
@@ -421,7 +421,7 @@ By creating a function, you can take any two inputs from a user and return a for
 
 Select **Load into REPL** to see the output.
 
-You can now change these inputs to any values you’d like. I’ll try “cat” and “claws”. 
+You can now change these inputs to any values you’d like. I’ll try “cat” and “claws”.
 
 ``` clojure
 (define-keyset 'admin-keyset (read-keyset "admin-keyset"))
@@ -465,7 +465,7 @@ Try creating a function that takes any two numbers as input, adds them together,
 ;; Call the function
 (addNumbers 12 7)
 ```
-You can now provide any two values to add with this function. 
+You can now provide any two values to add with this function.
 
 ___
 

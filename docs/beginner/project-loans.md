@@ -1,6 +1,6 @@
 # Pact Loans App
 
-Welcome to the **Loans** app project tutorial! 
+Welcome to the **Loans** app project tutorial!
 
 In this tutorial, you will build an example loans application using many of the techniques you learned in earlier tutorials
 
@@ -15,7 +15,7 @@ In this tutorial, you will build an example loans application using many of the 
 * Create Tables
 * Deploy Smart Contract
 
-The goal of this tutorial is to ensure you understand the building blocks of Pact applications, eventually navigating you toward building more complex applications. It’s also meant to push you toward solving problems that you may not have seen before to build valuable new applications. 
+The goal of this tutorial is to ensure you understand the building blocks of Pact applications, eventually navigating you toward building more complex applications. It’s also meant to push you toward solving problems that you may not have seen before to build valuable new applications.
 
 
 !!! Summary "Key Takeaway"
@@ -25,9 +25,9 @@ ___
 
 ## **Loans Smart Contract**
 
-Throughout this tutorial, you’ll get hands on and build a smart contract used to create, distribute, and manage loans. 
+Throughout this tutorial, you’ll get hands on and build a smart contract used to create, distribute, and manage loans.
 
-This smart contract uses schemas and tables pretty extensively and will give you great experience setting up tables as well as writing many different functions that can be used to create and manipulate data within these tables. 
+This smart contract uses schemas and tables pretty extensively and will give you great experience setting up tables as well as writing many different functions that can be used to create and manipulate data within these tables.
 
 A brief overview of each feature you’ll build is provided below.
 
@@ -44,7 +44,7 @@ ___
 
 ## **Project Environment Setup**
 
-To get started, choose a project directory and clone the project resources into your local environment. 
+To get started, choose a project directory and clone the project resources into your local environment.
 
 ``` terminal
 git clone https://github.com/kadena-io/pact-lang.org-code.git
@@ -77,16 +77,16 @@ ___
 
 ## **1. Module and Keyset**
 
-The first step is to create the module and keysets for your smart contract. 
+The first step is to create the module and keysets for your smart contract.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a keyset named **loans-admin-keyset** and a module named **loans** that specifies access to this keyset.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/1-module-and-keyset/challenge.pact" target="_blank">Challenge</a>
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/1-module-and-keyset/solution.pact" target="_blank">Solution</a>
 
 !!! Note
-    If you’re unfamiliar with modules and keyset, our <a href="https://pactlang.org/beginner/pact-modules/" target="_blank">Pact Modules Tutorial</a> is a great place to get started. 
+    If you’re unfamiliar with modules and keyset, our <a href="./beginner/pact-modules.html target="_blank">Pact Modules Tutorial</a> is a great place to get started.
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 The first step to build your module is to create the schema definitions for each table.
 
-The loans smart contract will consist of 3 tables as shown below. 
+The loans smart contract will consist of 3 tables as shown below.
 
 ![2-loans-overview](../assets/beginner-tutorials/project-loans/2-define-schemas.png)
 
@@ -105,7 +105,7 @@ For this challenge, you’ll see each table presented as fields and types. Your 
 
 ### **2.1 Loan Schema**
 
-The loan table will be used to hold loan entries. 
+The loan table will be used to hold loan entries.
 
 **loan table**
 
@@ -118,7 +118,7 @@ The loan table will be used to hold loan entries.
 
 
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take some time now to define the schema for the **loan** table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/2-define-schemas/2.1-loan/challenge.pact" target="_blank">Challenge</a>
@@ -137,7 +137,7 @@ The **loan-history** table will be used to track the loan’s histories. It incl
 | seller    | string    |
 | amount    | integer   |
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take some time now to define the schema for the **loan-history** table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/2-define-schemas/2.2-loan-history/challenge.pact" target="_blank">Challenge</a>
@@ -153,7 +153,7 @@ The **loan-inventory** table will be used to hold inventory balance.
 |-----------|-----------|
 | balance   | integer   |
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take some time now to define the schema for the **loan-inventory** table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/2-define-schemas/2.3-loan-inventory/challenge.pact" target="_blank">Challenge</a>
@@ -163,9 +163,9 @@ ___
 
 ## **3. Define Tables**
 
-Having defined each of the schemas for each table in your smart contract, you are now ready to define the tables. 
+Having defined each of the schemas for each table in your smart contract, you are now ready to define the tables.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take some time now to define each of the tables for the loans smart contract.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/3-define-tables/challenge.pact" target="_blank">Challenge</a>
@@ -178,11 +178,11 @@ ___
 
 ## **4. Define Consts**
 
-The loans smart contract contains a few **const** values that will be used to pass values into functions and tables. 
+The loans smart contract contains a few **const** values that will be used to pass values into functions and tables.
 
 The purpose of each of these constants will be more clear as you begin integrating them into functionality of your contract using functions. For now, complete the challenge to define the constants within your smart contract.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take some time now to define each of the const values INITIATED and ASSIGNED in the loans smart contract.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/4-define-consts/challenge.pact" target="_blank">Challenge</a>
@@ -215,7 +215,7 @@ Your first function will be a utility function meant to help combine the paramet
 
 #### **5.1 Inventory-key**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **inventory-key** that creates a key from the **owner** and **loanId** in the format **“loanId:owner”**.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.1-inventory-key/challenge.pact" target="_blank">Challenge</a>
@@ -234,9 +234,9 @@ The following 3 functions use a combination of read, insert, and update to add a
 
 #### **5.2 Create-a-loan**
 
-First, you’ll need to create a function to create a loan. 
+First, you’ll need to create a function to create a loan.
 
-Creating a loan can be done by populating specific columns with the appropriate loan data. Take a look at the tables below to see each of the columns that you will insert data into. 
+Creating a loan can be done by populating specific columns with the appropriate loan data. Take a look at the tables below to see each of the columns that you will insert data into.
 
 **loans-table**
 
@@ -253,7 +253,7 @@ Creating a loan can be done by populating specific columns with the appropriate 
 |------------------|-------------|
 | balance         | loanAmount   |
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Given these requirements, construct a function named **create-a-loan** that accepts parameters **loanId**, **loanName**, **entityName**, and **loanAmount** to add the appropriate information to each table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.2-create-a-loan/challenge.pact" target="_blank">Challenge</a>
@@ -295,7 +295,7 @@ The loan-inventory-table will have new data added and updated as needed.
 | “balance”: amount                   | insert   | inventory-key |
 | “balance”: (- issuerBalance amount) | update   | inventory-key |
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     This code challenge is complex, so take your time and don’t worry if you get stuck. Follow each line as shown and try to construct the functionality needed to **assign-a-loan**.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.3-assign-a-loan/challenge.pact" target="_blank">Challenge</a>
@@ -308,7 +308,7 @@ The loan-inventory-table will have new data added and updated as needed.
 
 The goal of the next function is similar to allow users to sell a loan. This function create a new row in the loan-history-table. This time, there is no table provided to help guide you. Try creating one for yourself if it is useful or follow the comments to complete the challenge.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     This is another difficult problem. Take your time and leverage what you learned in the previous section to help create this function.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.4-sell-a-loan/challenge.pact" target="_blank">Challenge</a>
@@ -322,11 +322,11 @@ ___
 
 ### **Read Functions**
 
-The next set of functions will allow you to **read** important information from the tables you created. These functions are much shorter than previous functions and the comments within the challenge files are hopefully enough to get you started. 
+The next set of functions will allow you to **read** important information from the tables you created. These functions are much shorter than previous functions and the comments within the challenge files are hopefully enough to get you started.
 
 #### **5.5 read-a-loan**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **read-a-loan** that returns the values at a given loanId.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.5-read-a-loan/challenge.pact" target="_blank">Challenge</a>
@@ -334,7 +334,7 @@ The next set of functions will allow you to **read** important information from 
 
 #### **5.6 read-loan-tx**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **read-loan-tx** that reads loan txids.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.6-read-loan-tx/challenge.pact" target="_blank">Challenge</a>
@@ -342,7 +342,7 @@ The next set of functions will allow you to **read** important information from 
 
 #### **5.7 read-all-loans**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **read-all-loans** that selects all values from the loans table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.7-read-all-loans/challenge.pact" target="_blank">Challenge</a>
@@ -350,7 +350,7 @@ The next set of functions will allow you to **read** important information from 
 
 #### **5.8 read-inventory-pair**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **read-inventory-pair** that reads the balance of a given key.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.8-read-inventory-pair/challenge.pact" target="_blank">Challenge</a>
@@ -358,7 +358,7 @@ The next set of functions will allow you to **read** important information from 
 
 #### **5.9 read-loan-inventory**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **read-loan-inventory** that reads the loan-inventory-table.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.9-read-loan-inventory/challenge.pact" target="_blank">Challenge</a>
@@ -366,7 +366,7 @@ The next set of functions will allow you to **read** important information from 
 
 #### **5.10 read-loans-with-status**
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Create a function named **read-loans-with-status** that reads all loans with a specific status.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/5-functions/5.10-read-loans-with-status/challenge.pact" target="_blank">Challenge</a>
@@ -378,7 +378,7 @@ ___
 
 Earlier in the smart contract, you defined 3 schemas and tables. Now that the module is complete, you are ready to move outside of the module to create each of these tables.
 
-!!! warning "Code Challenge" 
+!!! warning "Code Challenge"
     Take some time now to create each of the tables for the loans smart contract.
 
     * <a href="https://github.com/kadena-io/pact-lang.org-code/blob/master/loans/2-challenges/6-create-tables/challenge.pact" target="_blank">Challenge</a>
@@ -391,23 +391,23 @@ ___
 
 ### **Deploy the Smart Contract**
 
-Congratulations, at this point you have completed the Loans smart contract! 
+Congratulations, at this point you have completed the Loans smart contract!
 
 If you’d like, you can try deploying this smart contract. You can deploy this contract using the **Pact Onine Editor** or from the **Pact Atom SDK**. If you choose to deploy this locally, you’ll need the REPL file which you can find inside of the repository you cloned.
 
-For help getting started and deploying in each of these environments, try the following tutorials. 
+For help getting started and deploying in each of these environments, try the following tutorials.
 
-* <a href="https://pactlang.org/beginner/online-editor/" target="_blank">Pact Online Editor</a>
-* <a href="https://pactlang.org/beginner/pact-on-atom-sdk/" target="_blank">Pact Development on Atom SDK Tutorial</a>
+* <a href="./beginner/online-editor.html target="_blank">Pact Online Editor</a>
+* <a href="./beginner/pact-on-atom-sdk.html target="_blank">Pact Development on Atom SDK Tutorial</a>
 ___
 
 ## **Review**
 
 That wraps up this tutorial on the Loans app.
 
-By completing this tutorial, you’ve mastered many of the core ideas surrounding modules, schemas, tables, and functions, to tackle unfamiliar problems in new ways. Not only that, you’ve put each of these ideas into practice to create a smart contract that solves a very complex real world problem.  
+By completing this tutorial, you’ve mastered many of the core ideas surrounding modules, schemas, tables, and functions, to tackle unfamiliar problems in new ways. Not only that, you’ve put each of these ideas into practice to create a smart contract that solves a very complex real world problem.
 
-The same ideas you learned here can be applied to many other industries. Having the ability to create tables and manipulate data to create useful applications encompasses everything it means to build the back end of a blockchain application using Pact. 
+The same ideas you learned here can be applied to many other industries. Having the ability to create tables and manipulate data to create useful applications encompasses everything it means to build the back end of a blockchain application using Pact.
 
 
 
